@@ -47,7 +47,9 @@ body {
 }
 
 .snake-food {
-    background: linear-gradient(to top, rgb(12, 199, 12),rgb(255, 174, 0));
+    background-color: yellow;
+    box-shadow: 1px 1px 10px 1px white;
+    border-radius: 20px;
 }
 
 

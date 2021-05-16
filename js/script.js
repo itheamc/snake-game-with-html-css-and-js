@@ -14,7 +14,7 @@ let food;
 
 
 // Function to set default values
-const resetGame = () => {
+const initializeGame = () => {
     current_score = 0;
     high_score = localStorage.getItem('high-score') || 0
     highScore.innerText = "High Score - " + high_score
@@ -22,11 +22,11 @@ const resetGame = () => {
     last_frame_time = 0
     pressed_key = ""
     movement = {r: 0, c: 0}     // Here r represents the star row and c represents the start column
-    snakes = [{r: 10, c: 13}]
+    snakes = [{r: Math.round(2 +  (35 - 1) * Math.random()), c: Math.round(2 +  (35 - 1) * Math.random())}]
     food = {r: Math.round(2 +  (35 - 1) * Math.random()), c: Math.round(2 +  (35 - 1) * Math.random())}
 }
 
-resetGame()
+initializeGame()
 /**
  * -----------------------------------------------------------------------------------------
  * This is the starting function of the game
@@ -84,7 +84,7 @@ const gameEngine = () => {
     // Updating the snakes arrays as per the user key event
     if (isCollied()) {
         alert("Game Over")
-        resetGame()
+        initializeGame()
         return
     }
 
