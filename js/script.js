@@ -1,9 +1,10 @@
 const board  = document.getElementById("game-board")
 const currentScore = document.getElementById('current-score')
 const highScore = document.getElementById('high-score')
+const speedTextBox = document.getElementById('speed')
 
 
-let snake_speed = 15;
+let snake_speed = Number.parseInt(speedTextBox.innerText);
 let current_score;
 let high_score;
 let last_frame_time;
@@ -197,4 +198,9 @@ window.addEventListener('keydown', (e) => {
             break;
     }
 
+})
+
+
+speedTextBox.addEventListener('change', (e) => {
+    snake_speed = e.target.value
 })
