@@ -4,7 +4,7 @@ const highScore = document.getElementById('high-score')
 const speedTextBox = document.getElementById('speed')
 
 
-let snake_speed = Number.parseInt(speedTextBox.innerText);
+let snake_speed = Number.parseInt(speedTextBox.value);
 let current_score;
 let high_score;
 let last_frame_time;
