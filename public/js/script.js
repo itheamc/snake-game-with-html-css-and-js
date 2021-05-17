@@ -18,13 +18,13 @@ let food;
 const initializeGame = () => {
     current_score = 0;
     high_score = localStorage.getItem('high-score') || 0
-    highScore.innerText = "High Score - " + high_score
+    highScore.innerText = "Bipsee High Score - " + high_score
     currentScore.innerText = "Score - " + current_score
     last_frame_time = 0
     pressed_key = ""
     movement = {r: 0, c: 0}     // Here r represents the star row and c represents the start column
     snakes = [{r: Math.round(2 +  (35 - 1) * Math.random()), c: Math.round(2 +  (35 - 1) * Math.random())}]
-    food = {r: Math.round(2 +  (35 - 1) * Math.random()), c: Math.round(2 +  (35 - 1) * Math.random())}
+    food = {r: Math.round(2 +  (34 - 1) * Math.random()), c: Math.round(2 +  (34 - 1) * Math.random())}
 }
 
 initializeGame()
@@ -58,7 +58,7 @@ const main = (ctime) => {
  */
 const isCollied = () => {
     let is_colide = false
-    if (snakes[0].r < 1 || snakes[0].r > 35 || snakes[0].c < 1 || snakes[0].c > 35) {
+    if (snakes[0].r < 1 || snakes[0].r > 36 || snakes[0].c < 1 || snakes[0].c > 36) {
         is_colide = true
     }
 
@@ -97,7 +97,7 @@ const gameEngine = () => {
         
             snakes.unshift({r: snakes[0].r + movement.r, c: snakes[0].c + movement.c})
             // Placing food randomly with in the board
-            food = {r: Math.round(2 +  (35 - 1) * Math.random()), c: Math.round(2 +  (35 - 1) * Math.random())}
+            food = {r: Math.round(2 +  (34 - 1) * Math.random()), c: Math.round(2 +  (34 - 1) * Math.random())}
             current_score += 1;
             currentScore.innerText = "Score - " + current_score
 
@@ -127,6 +127,7 @@ const gameEngine = () => {
         snake_part.style.gridColumnStart = element.c
         if (index === 0) {
             snake_part.classList.add('snake-head')
+            snake_part.innerText = "S"
         } else {
             snake_part.classList.add('snake-body')
         }
