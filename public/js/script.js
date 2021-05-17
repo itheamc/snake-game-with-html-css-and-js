@@ -18,7 +18,7 @@ let food;
 const initializeGame = () => {
     current_score = 0;
     high_score = localStorage.getItem('high-score') || 0
-    highScore.innerText = "Bipsee High Score - " + high_score
+    highScore.innerText = "High Score - " + high_score
     currentScore.innerText = "Score - " + current_score
     last_frame_time = 0
     pressed_key = ""
