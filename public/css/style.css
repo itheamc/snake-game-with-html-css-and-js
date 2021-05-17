@@ -51,9 +51,17 @@ body {
 }
 
 .snake-food {
-    background-color: yellow;
-    box-shadow: 1px 1px 10px 1px white;
+    /* background-color: yellow; */
+    /* box-shadow: 1px 1px 10px 1px white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
+}
+
+.snake-food img {
+    width: 150%;
+    height: 150%;
 }
 
 

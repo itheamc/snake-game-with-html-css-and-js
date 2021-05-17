@@ -141,6 +141,8 @@ const gameEngine = () => {
     snake_food.style.gridRowStart = food.r
     snake_food.style.gridColumnStart = food.c
     snake_food.classList.add('snake-food')
+    snake_food.innerHTML = "<img src='/public/assets/images/mouse.png' alt='' srcset=''>"
+
     board.appendChild(snake_food)
 
 }
