@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url("assets/images/bg_image.jpg");
+    background: url("/snake-game-with-html-css-and-js/assets/images/bg_image.jpg");
     background-size: cover;
 }
 
